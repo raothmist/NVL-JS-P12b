@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>VCS prueba de bootcamp</title>
+<meta charset="utf-8"/>
+</head>
+<body>
+<header>
+	<h1>Bucles</h1>
+</header>
+<h3>Los Números pares son</h2>
+<p id = "pares"></p>
+<h3>Los Números impares son</h3>
+<p id = "impar"></p>
+<script type="text/javascript">    
+
+var numerito; 
+var impar = [];
+var pares = [];
+
+function arrays(numerito){
+    if (numerito % 2 == 0){
+        pares.push(numerito);
+    }else{
+        impar.push(numerito);
+    }
+}
+
+function random() {
+    numero = Math.floor((Math.random() * 100) + 1);
+    return numero;
+}
+
+for (i =0 ; i < 50 ; i++ ) {
+    arrays(random());
+}
+
+document.getElementById("pares").innerHTML = pares;
+document.getElementById("impar").innerHTML = impar;
+ </script>	
+</body>
+</html>
